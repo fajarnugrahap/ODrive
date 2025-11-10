@@ -24,7 +24,7 @@ public:
         float bandwidth = 1000.0f;
         int32_t phase_offset = 0;        // Offset between encoder count and rotor electrical phase
         float phase_offset_float = 0.0f; // Sub-count phase alignment offset
-        int32_t cpr = (2048 * 4);   // Default resolution of CUI-AMT102 encoder,
+        int32_t cpr = (1000 * 4);   // Default resolution of CUI-AMT102 encoder,
         float index_offset = 0.0f;
         bool use_index = false;
         bool pre_calibrated = false; // If true, this means the offset stored in
