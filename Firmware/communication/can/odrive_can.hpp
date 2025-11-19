@@ -24,8 +24,8 @@ class ODriveCAN : public CanBusBase, public ODriveIntf::CanIntf {
 public:
     struct Config_t {
         uint32_t baud_rate = CAN_BAUD_500K;
-        // Protocol protocol = PROTOCOL_SIMPLE;
-        Protocol protocol = PROTOCOL_UAVCAN;
+        Protocol protocol = PROTOCOL_SIMPLE;
+        // Protocol protocol = PROTOCOL_UAVCAN;
 
         ODriveCAN* parent = nullptr; // set in apply_config()
         void set_baud_rate(uint32_t value) { parent->set_baud_rate(value); }

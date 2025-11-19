@@ -1,8 +1,19 @@
 #include "can_uavcan.hpp"
-
-// canardSetLocalNodeID(&_canard, deviceAddress);
+#include <libcanard/canard.h>
 
 static CanardInstance _canard;
+static uint8_t memoryPool[1024];
+CanardCANFrame rxFrame;
+
+void UAVCAN::init(){
+	canardInit(&_canard,
+			memoryPool,
+			sizeof(memoryPool),
+			onTransferReceived,
+			shouldAcceptTransfer,
+			NULL);
+	canardSetLocalNodeID(&_canard, 1); 
+}
 
 void sendNodeStatus(bool isFailEnggaged){
 	uint8_t buffer[UAVCAN_PROTOCOL_NODESTATUS_MAX_SIZE];

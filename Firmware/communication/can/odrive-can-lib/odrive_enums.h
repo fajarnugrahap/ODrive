@@ -42,7 +42,7 @@ enum ODriveStreamProtocolType {
 // ODrive.Can.Protocol
 enum ODriveProtocol {
     PROTOCOL_SIMPLE                          = 0x00000001,
-    PROTOCOL_UAVCAN                          = 0x00000002,
+    // PROTOCOL_UAVCAN                          = 0x00000002,
 };
 
 // ODrive.Axis.AxisState
