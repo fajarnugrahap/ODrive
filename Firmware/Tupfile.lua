@@ -66,6 +66,8 @@ odrive_firmware_pkg = {
         '.',
         'MotorControl',
         'fibre-cpp/include',
+        'communication/can',
+        'communication/can/libcanard',
     },
     code_files = {
         'syscalls.c',
@@ -93,7 +95,8 @@ odrive_firmware_pkg = {
         'Drivers/STM32/stm32_nvm.c',
         'Drivers/STM32/stm32_spi_arbiter.cpp',
         'communication/can/can_simple.cpp',
-        'communication/can/odrive_can.cpp',    
+        'communication/can/odrive_can.cpp',
+        'communication/can/can_uavcan.cpp',    
         'communication/communication.cpp',
         'communication/ascii_protocol.cpp',
         'communication/interface_uart.cpp',
