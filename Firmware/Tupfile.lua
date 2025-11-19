@@ -68,6 +68,7 @@ odrive_firmware_pkg = {
         'fibre-cpp/include',
         'communication/can',
         'communication/can/libcanard',
+        'communication/can/dsdl_generated/include',
     },
     code_files = {
         'syscalls.c',
